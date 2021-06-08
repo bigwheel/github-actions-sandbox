@@ -6,7 +6,8 @@ inputs:
     required: true
     default: 'World'
 runs:
-  using: "composite"
+  using: "includes"
   steps:
+    - uses: actions/checkout@v2
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash

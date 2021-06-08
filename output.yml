@@ -1,0 +1,28 @@
+
+# !! WARNING !!
+# Do not modify this file directly!
+# !! WARNING !!
+#
+# It is generated from: .github/workflows/super-linter.yml
+# using the script from https://github.com/mithro/actions-includes@main
+
+name: Super-Linter
+on: [push, workflow_dispatch]
+jobs:
+  # ジョブキーを設定する。 ジョブ名が指定されていない場合、
+  # キーはジョブ名として表示される
+  super-lint:
+    # ジョブ名を付ける
+    name: Lint code base
+    runs-on: ubuntu-latest
+    steps:
+    - name: ⏰ 🛂 📕 - Checking workflow expansion is up to date
+      uses: mithro/actions-includes@main
+      if: runner.os == 'Linux'
+      continue-on-error: false
+      with:
+        workflow: output.yml
+    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+    - run: echo Hello World.
+      shell: bash
