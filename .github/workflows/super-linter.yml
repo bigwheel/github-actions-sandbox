@@ -1,7 +1,6 @@
 name: Super-Linter
 
-# 新しいコミットがリポジトリにプッシュされるたびにこのワークフローを実行する
-on: push
+on: [push, workflow_dispatch]
 
 jobs:
   # ジョブキーを設定する。 ジョブ名が指定されていない場合、
