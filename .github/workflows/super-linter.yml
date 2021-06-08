@@ -1,6 +1,8 @@
 name: Super-Linter
 
-on: [push, workflow_dispatch]
+on:
+  push: {}
+  workflow_dispatch: {}
 
 jobs:
   # ジョブキーを設定する。 ジョブ名が指定されていない場合、
